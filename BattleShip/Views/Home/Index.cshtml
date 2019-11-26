@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">BATTLESHIP</h1>
+
+</div>
+
+<br />
+<form method="post" asp-controller="Home" asp-action="RequestPlayers" class="text-center">
+    <p>Will you be fighting for the light or dark side?</p><br />
+    <input type="checkbox" name="side" value="Light" asp-controller="Home" asp-action="RequestPlayers" />
+    <input type="checkbox" name="side" value="Dark" asp-controller="Home" asp-action="RequestPlayers" /><br />
+    <br /><p>Would you like to battle the computer or a friend?</p>
+    <input type="submit" name="players" value="Computer" method="post" asp-controller="Home" asp-action="RequestPlayers" />
+    <input type="submit" name="players" value="Friend" method="post" asp-controller="Home" asp-action="RequestPlayers" /><br />
+</form>
